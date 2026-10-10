@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Zone | The Home of Football</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">⚽ FOOTBALL<span>ZONE</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#matches">Matches</a>
+      <a href="#teams">Teams</a>
+      <a href="#news">News</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="tag">YOUR GAME. YOUR PASSION.</p>
+      <h1>LIVE THE <span>GAME.</span></h1>
+      <p>All the football action, one destination.</p>
+      <a href="#matches" class="btn">Explore Matches →</a>
+    </section>
+
+    <section class="section" id="matches">
+      <div class="section-heading">
+        <div>
+          <p class="tag">MATCH CENTRE</p>
+          <h2>Football Fixtures</h2>
+        </div>
+        <input id="search" type="search"
+          placeholder="Search teams...">
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="live">Live</button>
+        <button class="filter" data-filter="upcoming">Upcoming</button>
+        <button class="filter" data-filter="finished">Finished</button>
+      </div>
+
+      <div id="match-list" class="match-grid"></div>
+      <p id="empty-message" hidden>No matches found.</p>
+      <p class="demo-note">
+        Demo fixtures — scores and schedules are examples.
+      </p>
+    </section>
+
+    <section class="section" id="teams">
+      <p class="tag">CLUB DIRECTORY</p>
+      <h2>Popular Teams</h2>
+      <div class="team-grid">
+        <article class="team-card">
+          <div class="team-icon">🔴</div>
+          <h3>Manchester United</h3>
+          <p>Premier League</p>
+        </article>
+        <article class="team-card">
+          <div class="team-icon">🔵</div>
+          <h3>Manchester City</h3>
+          <p>Premier League</p>
+        </article>
+        <article class="team-card">
+          <div class="team-icon">⚪</div>
+          <h3>Real Madrid</h3>
+          <p>La Liga</p>
+        </article>
+        <article class="team-card">
+          <div class="team-icon">🔴</div>
+          <h3>Barcelona</h3>
+          <p>La Liga</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="news-banner" id="news">
+      <p class="tag">MORE THAN A GAME</p>
+      <h2>Every Goal Has a Story.</h2>
+      <p>Follow the teams you love and never stop the passion.</p>
+      <a href="#matches" class="btn">Explore Football</a>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#home" class="logo">⚽ FOOTBALL<span>ZONE</span></a>
+    <p>Made for football fans. © 2026 Football Zone.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

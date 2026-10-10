@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #080d0b;
+  --card: #111a15;
+  --green: #38e27b;
+  --text: #f5f7f5;
+  --muted: #9ba9a0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 8%;
+  border-bottom: 1px solid #243128;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.logo span,
+.hero h1 span {
+  color: var(--green);
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--green);
+}
+
+.hero {
+  min-height: 360px;
+  padding: 90px 8%;
+  background:
+    radial-gradient(ellipse at 80% 40%,
+      #174b2c 0%, transparent 45%),
+    linear-gradient(120deg, #0c1710, #080d0b);
+}
+
+.tag {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 8vw, 76px);
+  line-height: 1.15;
+  margin: 15px 0;
+}
+
+.hero p:not(.tag) {
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--green);
+  color: #061009;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #86ffae;
+}
+
+.section {
+  padding: 65px 8%;
+}
+
+.section h2,
+.news-banner h2 {
+  font-size: 30px;
+  margin: 5px 0 24px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#search {
+  background: var(--card);
+  color: white;
+  border: 1px solid #314036;
+  padding: 12px;
+  border-radius: 6px;
+  width: min(100%, 240px);
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin: 5px 0 25px;
+  flex-wrap: wrap;
+}
+
+.filter {
+  background: var(--card);
+  color: var(--muted);
+  border: 1px solid #29362d;
+  padding: 9px 17px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filter.active,
+.filter:hover {
+  background: var(--green);
+  color: #061009;
+}
+
+.match-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.match-card,
+.team-card {
+  background: var(--card);
+  border: 1px solid #25352a;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.match-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.league,
+.match-time,
+.team-card p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.status {
+  font-size: 11px;
+  font-weight: bold;
+  color: var(--green);
+}
+
+.teams {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+}
+
+.club {
+  font-weight: bold;
+  overflow-wrap: anywhere;
+}
+
+.score {
+  font-size: 25px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.match-time {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.demo-note {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.team-card {
+  text-align: center;
+}
+
+.team-icon {
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+
+.team-card h3 {
+  font-size: 15px;
+}
+
+.news-banner {
+  margin: 10px 8% 65px;
+  padding: 45px 30px;
+  text-align: center;
+  border-radius: 15px;
+  background: linear-gradient(130deg, #143a23, #101914);
+}
+
+.news-banner p:not(.tag) {
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+footer {
+  padding: 28px 8%;
+  border-top: 1px solid #243128;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+footer p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+#empty-message {
+  color: var(--muted);
+  padding: 20px 0;
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .hero {
+    padding: 65px 6%;
+  }
+
+  .section {
+    padding: 45px 6%;
+  }
+
+  .match-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .news-banner {
+    margin: 10px 6% 45px;
+  }
+
+  footer {
+    padding: 25px 6%;
+  }
+}
