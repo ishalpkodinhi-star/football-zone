@@ -302,3 +302,19 @@ footer p {
     padding: 25px 6%;
   }
 }
+.site-footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+.site-footer strong {
+  color: #22c55e;
+}
+
+.site-footer p {
+  margin: 5px 0;
+}
